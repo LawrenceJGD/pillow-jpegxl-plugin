@@ -25,6 +25,7 @@ def test_encode(image):
     assert img_ori.size == img_enc.size == (40, 50)
     assert img_ori.mode == img_enc.mode
     assert img_enc.info["icc_profile"]
+    img_enc.convert("L")
 
 
 def test_jpeg_encode():
